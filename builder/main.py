@@ -13,7 +13,7 @@ d = {
     'bio': user['bio'],
     'company': user['company'],
     'location': user['location'],
-    'avatar_url': user['bio'],
+    'avatar_url': user['avatar_url'],
     'github_url': user['html_url'],
     'blog_url': f'https://{user["blog"]}',
     'email_url': '',
