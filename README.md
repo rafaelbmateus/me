@@ -14,8 +14,8 @@ and connecting with the public github api.
 - [x] Account created at
 - [x] List of repos with the tag
 - [x] Deploy using gh-pages
+- [x] SEO's meta tags
 - [ ] Responsive
-- [ ] Meta tags
 
 ## How to create your profile page?
 

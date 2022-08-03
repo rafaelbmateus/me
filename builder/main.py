@@ -9,6 +9,7 @@ print(user)
 
 d = {
     'username': username,
+    'title': f'{user["name"]} | GitHub Profile Page', 
     'name': user['name'],
     'bio': user['bio'],
     'company': user['company'],
