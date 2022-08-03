@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/background.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="/">
+        <span class="gray">&lt;</span>
+        <span id="logo-name" class="logo-name">github-me</span>
+        <span class="gray">/&gt;</span>
+      </a>
+    </header>
+    <div class="profile">
+      <h1 class="title">
+        <span id="name">Hi there</span>
+        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="60" height="60">
+      </h1>
+      <h2 id="bio" class="subtitle light-gray"></h2>
+      <h3 id="company" class="gray company"></h3>
+      <div class="row contact">
+        <a id="github_url" class="button col" href="/" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+        <a id="blog_url" class="button col" href="/" target="_blank">
+          <i class="fa-brands fa-blogger"></i>
+          Blog
+        </a>
+        <a id="email_url" class="button col" href="/" target="_blank">
+          <i class="fa-solid fa-square-envelope"></i>
+          Contact me
+        </a>
+      </div>
+      <br><hr>
+      <div class="row followers gray">
+        <div class="col">
+          <a id="repos_url" href="/" target="_blank">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span id="public_repos"></span>
+          </a>
+        </div>
+        <div class="col">
+          <a id="followers_url" href="/" target="_blank">
+            <i class="fa-solid fa-users"></i>
+            <span id="followers"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="repos">
+      <div id="repos" class="row"></div>
+    </div>
+    <footer class="footer">
+      <span id="created_at" class="gray since"></span>
+      <span id="location" class="gray location"></span>
+    </footer>
+    <ul class="background"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/date.js"></script>
+    <script src="assets/js/github.js"></script>
+  </body>
+</html>

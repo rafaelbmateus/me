@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Agustina Regular";
+  src: url("../fonts/Agustina-Signature.otf");
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  margin: 0px;
+}
+
+.header {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.footer {
+  padding: 10px;
+  margin-top: 150px;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 1.4em;
+  text-decoration: none ;
+}
+
+.logo-name {
+  font-family: "Agustina Regular";
+  padding: 0 10px;
+  color: #55198b;
+}
+
+.gray {
+  color: #868e96;
+}
+
+.light-gray {
+  color: #b9b9b9;
+}
+
+.white {
+  color: #fff;
+}
+
+.profile {
+  margin-top: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.title {
+  font-size: 70px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.company {
+  font-size: 25px;
+  color: #fff;
+}
+
+.followers {
+  font-size: 20px;
+  width: 40%;
+}
+
+.since {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.location {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.contact {
+  margin-top: 100px;
+}
+
+.repos {
+  margin-top: 50px;
+  background-color: #fff;
+}
+
+.col {
+  float: left;
+  width: 25%;
+  padding: 12px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  background-color: #17121c;
+  border: solid 1px #17121c;
+  color: #fff;
+  font-weight: 700;
+  width: max-content;
+  padding: 13px 22px;
+  margin-right: 50px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #55198b;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-3px);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card{
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+  font-size: 24px;
+}
+
+.card p{
+  font-size: 18px;
+}
+
+a:any-link {
+  color: #fff;
+  text-decoration-color: #55198b;
+}
