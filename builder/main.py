@@ -8,13 +8,20 @@ user = github.user(username)
 print(user)
 
 d = {
-    'name': 'Rafael Mateus',
-    'bio': 'A passionate Software Developer 🚀 having an experience of building Web and API applications with API Engineer GoLang / Ruby / Rails / Docker / K8s Python and some other cool libraries and frameworks.',
-    'company': 'Neoway',
-    'avatar_url': '',
-    'github_url': '',
-    'blog_url': '',
+    'username': username,
+    'name': user['name'],
+    'bio': user['bio'],
+    'company': user['company'],
+    'location': user['location'],
+    'avatar_url': user['bio'],
+    'github_url': user['html_url'],
+    'blog_url': f'https://{user["blog"]}',
     'email_url': '',
+    'repos_url': f'{user["html_url"]}?tab=repositories',
+    'followers_url': f'{user["html_url"]}?tab=followers',
+    'created_at': f'Since {user["created_at"]} on GitHub.',
+    'public_repos': f'{user["public_repos"]} repositories',
+    'followers': f'{user["followers"]} followers',
 }
 
 with open('builder/template.html', 'r') as f:

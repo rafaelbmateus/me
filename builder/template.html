@@ -2,17 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>$name | github-me</title>`);
-    <meta name="description" content="$bio">`);
-    <meta name="keywords" content="$name, github-me, profile, webpage, portfolio">`);
-    <meta name="author" content="$name">`);
+    <title>$name | github-me</title>
+    <meta name="description" content="$bio">
+    <meta name="keywords" content="$name, github-me, profile, webpage, portfolio">
+    <meta name="author" content="$name">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:type" content="website">`);
-    <meta property="og:site_name" content="$name | github-me">`);
-    <meta property="og:title" content="$name | github-me">`);
-    <meta property="og:description" content="$bio">`);
-    <meta property="og:image" itemprop="image" content="$avatar_url">`);
-    <link id="favicon" rel="profile icon" type="image/png" href="$avatar_url">`);
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="$name | github-me">
+    <meta property="og:title" content="$name | github-me">
+    <meta property="og:description" content="$bio">
+    <meta property="og:image" itemprop="image" content="$avatar_url">
+    <link id="favicon" rel="profile icon" type="image/png" href="$avatar_url">
     <link rel="stylesheet" href="assets/css/background.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -51,13 +51,13 @@
         <div class="col">
           <a id="repos_url" href="/" target="_blank">
             <i class="fa-solid fa-diagram-project"></i>
-            <span id="public_repos"></span>
+            <span id="public_repos">$public_repos</span>
           </a>
         </div>
         <div class="col">
           <a id="followers_url" href="/" target="_blank">
             <i class="fa-solid fa-users"></i>
-            <span id="followers"></span>
+            <span id="followers">$followers</span>
           </a>
         </div>
       </div>
@@ -66,13 +66,12 @@
       <div id="repos" class="row"></div>
     </div>
     <footer class="footer">
-      <span id="created_at" class="gray since"></span>
-      <span id="location" class="gray location"></span>
+      <span id="created_at" class="gray since">$created_at</span>
+      <span id="location" class="gray location">$location</span>
     </footer>
     <ul class="background"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    <script>const username = "$username";</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/date.js"></script>
     <script src="assets/js/github.js"></script>
   </body>
 </html>

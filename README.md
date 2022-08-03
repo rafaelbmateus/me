@@ -90,6 +90,21 @@ The endpoint used are:
 - [api.github.com/users/<username>](https://api.github.com/users/rafaelbmateus)
 - [api.github.com/users/<username>/repos](https://api.github.com/users/rafaelbmateus/repos)
 
+## Running localhost
+
+Clone repository
+
+```console
+git clone git@github.com:rafaelbmateus/me.git
+cd me
+```
+
+Build the page using:
+
+```console
+GITHUB_USERNAME=<username> python3 builder/main.py
+```
+
 ## Others profile pages builders
 
 If you want something more powerful take a look at the projects

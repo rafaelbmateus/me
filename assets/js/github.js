@@ -1,44 +1,12 @@
 $(document).ready(function () {
-  profile();
   repos();
 });
 
-async function profile() {
-  const url = "https://api.github.com/users/" + getUsername();
-  const response = await fetch(url);
-  const user = await response.json();
-
-  if (user.name != null) {
-    $("#logo-name").text(user.name);
-    $("#name").text(`${greetings}, I'm ${user.name}`);
-  }
-
-  if (user.bio != null) {
-    $("#bio").text(user.bio);
-  }
-  
-  if (user.company != null) {
-    $("#company").text(`@${user.company}`);
-  }
-
-  if (user.location != null) {
-    $("#location").text(`From ${user.location}`);
-  }
-
-  $("#public_repos").text(`${user.public_repos} repositories`);
-  $("#followers").text(`${user.followers} followers`);
-  $("#github_url").attr("href", user.html_url);
-  $("#blog_url").attr("href", `https://${user.blog}`);
-  $("#email_url").attr("href", user.html_url);
-  $("#repos_url").attr("href", `${user.html_url}?tab=repositories`);
-  $("#followers_url").attr("href", `${user.html_url}?tab=followers`);
-  $("#created_at").text(`Since ${since(user.created_at)} on GitHub.`);
-}
-
 async function repos() {
-  const url = "https://api.github.com/users/" + getUsername() + "/repos";
+  const url = "https://api.github.com/users/" + username + "/repos";
   const response = await fetch(url);
   const repos = await response.json();
+  const topic_tag = "me";
 
   has = false;
   for (var i = 0; i < repos.length; i++) {
@@ -67,15 +35,6 @@ async function repos() {
       <br><br>`
     );
   }
-}
-
-function getUsername() {
-  fromURL = window.location.href.split(".github.io")[0].split("/")[2]
-  if (fromURL != "") {
-    return fromURL
-  }
-  
-  return username
 }
 
 function getRepoName(html_url) {
