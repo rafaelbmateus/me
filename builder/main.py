@@ -3,9 +3,7 @@ import github
 from string import Template
 
 username = os.getenv('GITHUB_USERNAME')
-
 user = github.user(username)
-print(user)
 
 d = {
     'username': username,
@@ -28,7 +26,8 @@ d = {
 with open('builder/template.html', 'r') as f:
     src = Template(f.read())
     result = src.substitute(d)
-    print(result)
 
 with open('index.html', 'w') as f:
     f.write(result)
+
+print("The index.html file was successfully generated")

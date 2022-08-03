@@ -7,15 +7,15 @@
     <meta name="keywords" content="$name, github, profile, portfolio, webpage">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="$name">
-    <!-- <meta property="og:url" content="https://rafaelbmateus.github.io/me/"> -->
+    <meta property="og:url" content="">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="$title">
     <meta property="og:title" content="$title">
     <meta property="og:description" content="$bio">
     <meta property="og:image" itemprop="image" content="$avatar_url">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- <meta property="twitter:domain" content="rafaelbmateus.github.io"> -->
-    <!-- <meta property="twitter:url" content="https://rafaelbmateus.github.io/me/"> -->
+    <meta property="twitter:domain" content="">
+    <meta property="twitter:url" content="">
     <meta name="twitter:title" content="$title">
     <meta name="twitter:description" content="API Engineer | Tech Lead | GoLang | DevOps | Docker | K8s | Ruby | Rails | Python | IoT">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/8009492?v=4">
@@ -28,27 +28,28 @@
     <header class="header">
       <a class="logo" href="/">
         <span class="gray">&lt;</span>
-        <span id="logo-name" class="logo-name">$name</span>
+        <span class="logo-name">$name</span>
         <span class="gray">/&gt;</span>
       </a>
     </header>
     <div class="profile">
-      <h1 class="title">
-        <span id="name">Hi there, I'm $name</span>
-        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="60" height="60">
-      </h1>
-      <h2 id="bio" class="subtitle light-gray">$bio</h2>
-      <h3 id="company" class="gray company">$company</h3>
+      <div class="title">
+        <img class="avatar" src="$avatar_url" width="150" height="150"/><br>
+        <span>Hi there, I'm $name</span>
+        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="60" height="60"/>
+      </div>
+      <h2 class="subtitle light-gray">$bio</h2>
+      <h3 class="gray company">$company</h3>
       <div class="row contact">
-        <a id="github_url" class="button col" href="$github_url" target="_blank">
+        <a class="button col" href="$github_url" target="_blank">
           <i class="fa-brands fa-github"></i>
           GitHub
         </a>
-        <a id="blog_url" class="button col" href="$blog_url" target="_blank">
+        <a class="button col" href="$blog_url" target="_blank">
           <i class="fa-brands fa-blogger"></i>
           Blog
         </a>
-        <a id="email_url" class="button col" href="$email_url" target="_blank">
+        <a class="button col" href="$email_url" target="_blank">
           <i class="fa-solid fa-square-envelope"></i>
           Contact me
         </a>
@@ -56,15 +57,15 @@
       <br><hr>
       <div class="row followers gray">
         <div class="col">
-          <a id="repos_url" href="/" target="_blank">
+          <a href="$repos_url" target="_blank">
             <i class="fa-solid fa-diagram-project"></i>
-            <span id="public_repos">$public_repos</span>
+            <span>$public_repos</span>
           </a>
         </div>
         <div class="col">
-          <a id="followers_url" href="/" target="_blank">
+          <a href="$followers_url" target="_blank">
             <i class="fa-solid fa-users"></i>
-            <span id="followers">$followers</span>
+            <span>$followers</span>
           </a>
         </div>
       </div>
@@ -73,11 +74,19 @@
       <div id="repos" class="row"></div>
     </div>
     <footer class="footer">
-      <span id="created_at" class="gray since">$created_at</span>
-      <span id="location" class="gray location">$location</span>
+      <a href="$github_url" target="_blank">
+        <img class="avatar" src="$avatar_url" width="30" height="30"/>
+      </a>
+      <span class="gray since">$created_at</span>
+      <span class="gray location">$location</span>
     </footer>
     <ul class="background"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-    <script>const username = "$username";</script>
+    <script>
+      const username = "$username";
+      document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
+      document.querySelector('meta[property="twitter:url"]').setAttribute("content", window.location.href);
+      document.querySelector('meta[property="twitter:domain"]').setAttribute("content", window.location.href);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/github.js"></script>
   </body>

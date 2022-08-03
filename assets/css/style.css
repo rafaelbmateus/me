@@ -14,6 +14,10 @@ body {
   background-color: #fff;
 }
 
+.avatar {
+  border-radius: 50%;
+}
+
 .footer {
   padding: 10px;
   margin-top: 150px;
@@ -161,5 +165,5 @@ body {
 
 a:any-link {
   color: #fff;
-  text-decoration-color: #55198b;
+  text-decoration: none;
 }
