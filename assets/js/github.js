@@ -15,10 +15,31 @@ async function repos() {
       has = true;
       $("#repos").append(
         `<div class="col">
-          <a>
+          <a href="${repo.html_url}" target="_blank">
             <div class="card">
-              <h3>${getRepoName(repo.html_url)}</h3>
+              <span class="gray">${repo.language}</span>
+              <h3 class="gray">
+                <i class="fa-brands fa-buffer"></i>
+                ${repo.name}
+              </h3>
               <p class="gray">${repo.description}</p>
+              <div class="row gray" style="font-size: 22px">
+                <div class="col">
+                  <i class="fa-solid fa-star fa-2xs"></i>
+                  ${repo.stargazers_count}
+                </div>
+                <div class="col">
+                  <i class="fa-solid fa-code-fork fa-2xs"></i>
+                  ${repo.forks_count}
+                </div>
+                <div class="col">
+                  <i class="fa-solid fa-eye fa-2xs"></i>
+                  ${repo.watchers_count}
+                </div>
+                <div class="col">
+                  ${repo.size} MB
+                </div>
+              </div>
             </div>
           </a>
         </div>`
@@ -35,8 +56,4 @@ async function repos() {
       <br><br>`
     );
   }
-}
-
-function getRepoName(html_url) {
-  return html_url.split("/")[4];
 }
