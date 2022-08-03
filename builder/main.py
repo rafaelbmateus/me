@@ -1,7 +1,11 @@
-import requests
+import os
+import github
 from string import Template
 
-x = requests.get('https://api.github.com/users/rafaelbmateus')
+username = os.getenv('GITHUB_USERNAME')
+
+user = github.user(username)
+print(user)
 
 d = {
     'name': 'Rafael Mateus',
@@ -13,7 +17,7 @@ d = {
     'email_url': '',
 }
 
-with open('template.html', 'r') as f:
+with open('builder/template.html', 'r') as f:
     src = Template(f.read())
     result = src.substitute(d)
     print(result)

@@ -32,6 +32,15 @@ jobs:
         uses: actions/checkout@v3
       - name: Echo GitHub 
         run: echo ${{ github.actor }}
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: execute py script
+        run: |
+          python builder/main.py
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: Upload artifact
