@@ -1,6 +1,7 @@
 import os
 import github
 from string import Template
+from dateutil import parser
 
 username = os.getenv('GITHUB_USERNAME')
 user = github.user(username)
@@ -18,9 +19,9 @@ d = {
     'email_url': '',
     'repos_url': f'{user["html_url"]}?tab=repositories',
     'followers_url': f'{user["html_url"]}?tab=followers',
-    'created_at': f'Since {user["created_at"]} on GitHub.',
     'public_repos': f'{user["public_repos"]} repositories',
     'followers': f'{user["followers"]} followers',
+    'created_at': f'Since {parser.parse(user["created_at"]).strftime("%B %Y")} on GitHub.',
 }
 
 with open('builder/template.html', 'r') as f:
