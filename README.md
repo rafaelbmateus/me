@@ -16,6 +16,7 @@ and connecting with the public github api.
 - [x] Deploy using gh-pages
 - [x] SEO's meta tags
 - [ ] Responsive
+- [ ] Organizations
 
 ## How to create your profile page?
 
