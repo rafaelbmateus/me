@@ -8,18 +8,6 @@ async function profile() {
   const response = await fetch(url);
   const user = await response.json();
 
-  $("head").append(`<title>${user.name} | github-me</title>`);
-  $("head").append(`<meta name="description" content="${user.bio}">`);
-  $("head").append(`<meta name="keywords" content="${user.name}, github-me, profile, webpage, portfolio">`);
-  $("head").append(`<meta name="author" content="${user.name}">`);
-  $("head").append(`<meta property="og:type" content="website">`);
-  $("head").append(`<meta property="og:site_name" content="${user.name} | github-me">`);
-  $("head").append(`<meta property="og:title" content="${user.name} | github-me">`);
-  $("head").append(`<meta property="og:description" content="${user.bio}">`);
-  $("head").append(`<meta property="og:url" content="${window.location.href}">`);
-  $("head").append(`<meta property="og:image" itemprop="image" content="${user.avatar_url}">`);
-  $("head").append(`<link id="favicon" rel="profile icon" type="image/png" href="${user.avatar_url}">`);
-
   if (user.name != null) {
     $("#logo-name").text(user.name);
     $("#name").text(`${greetings}, I'm ${user.name}`);
