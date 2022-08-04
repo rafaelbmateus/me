@@ -1,2 +1,3 @@
-assets/css/* linguist-documentation
-*.js linguist-documentation=false
+*.css linguist-documentation
+*.js linguist-documentation
+*.html linguist-documentation
