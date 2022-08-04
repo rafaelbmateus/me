@@ -23,7 +23,7 @@ async function repos() {
                 ${repo.name}
               </h3>
               <p class="gray">${repo.description}</p>
-              <div class="row gray" style="font-size: 22px">
+              <div class="row gray" style="font-size: 18px">
                 <div class="col">
                   <i class="fa-solid fa-star fa-2xs"></i>
                   ${repo.stargazers_count}
