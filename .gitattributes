@@ -1,2 +1,2 @@
-*.css linguist-documentation=false
+assets/css/* linguist-documentation=false
 *.js linguist-documentation=false
