@@ -54,10 +54,6 @@
           <i class="fa-brands fa-blogger"></i>
           Blog
         </a>
-        <a class="button col" href="$email_url" target="_blank">
-          <i class="fa-solid fa-square-envelope"></i>
-          Contact me
-        </a>
       </div>
       <br><hr>
       <div class="row followers gray">
@@ -90,7 +86,7 @@
       const username = "$username";
       document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
       document.querySelector('meta[property="twitter:url"]').setAttribute("content", window.location.href);
-      document.querySelector('meta[property="twitter:domain"]').setAttribute("content", window.location.href);
+      document.querySelector('meta[property="twitter:domain"]').setAttribute("content", window.location.hostname);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/github.js"></script>

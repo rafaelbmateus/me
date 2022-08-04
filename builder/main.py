@@ -6,9 +6,19 @@ from dateutil import parser
 username = os.getenv('GITHUB_USERNAME')
 user = github.user(username)
 
+if user["name"] == None:
+    user["name"] = ""
+    title = f'{user["name"]} | '
+
+if user["company"] == None:
+    user["company"] = ""
+
+if user["location"] == None:
+    user["location"] = ""
+
 d = {
     'username': username,
-    'title': f'{user["name"]} | GitHub Profile Page', 
+    'title': f'{title}GitHub Profile Page', 
     'name': user['name'],
     'bio': user['bio'],
     'company': user['company'],
@@ -16,7 +26,6 @@ d = {
     'avatar_url': user['avatar_url'],
     'github_url': user['html_url'],
     'blog_url': f'https://{user["blog"]}',
-    'email_url': '',
     'repos_url': f'{user["html_url"]}?tab=repositories',
     'followers_url': f'{user["html_url"]}?tab=followers',
     'public_repos': f'{user["public_repos"]} repositories',
