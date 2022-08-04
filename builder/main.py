@@ -6,9 +6,10 @@ from dateutil import parser
 username = os.getenv('GITHUB_USERNAME')
 user = github.user(username)
 
+title = f'{user["name"]} | GitHub Profile Page'
 if user["name"] == None:
     user["name"] = ""
-    title = f'{user["name"]} | '
+    title = 'GitHub Profile Page'
 
 if user["company"] == None:
     user["company"] = ""
@@ -18,7 +19,7 @@ if user["location"] == None:
 
 d = {
     'username': username,
-    'title': f'{title}GitHub Profile Page', 
+    'title': f'{title} | GitHub Profile Page', 
     'name': user['name'],
     'bio': user['bio'],
     'company': user['company'],
