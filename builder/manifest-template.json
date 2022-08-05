@@ -6,7 +6,6 @@
   "background_color": "#5900b3",
   "theme_color": "black",
   "start_url": "/me/",
-  "scope": "/me/",
   "icons":[
     {
       "src":"$avatar_url",
