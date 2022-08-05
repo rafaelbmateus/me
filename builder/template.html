@@ -82,7 +82,14 @@
     <script>
       const username = "$username";
       document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
-      registerSW();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/github.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        registerSW();
+      });
+
       async function registerSW() {
         if ('serviceWorker' in navigator) {
           try {
@@ -95,8 +102,6 @@
           }
         }
       }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/github.js"></script>
+   </script>  
   </body>
 </html>
