@@ -5,7 +5,7 @@ var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
   `${GHPATH}/assets/css/background.css`,
-  `${GHPATH}/assets/css/styles.css`,
+  `${GHPATH}/assets/css/style.css`,
   `${GHPATH}/assets/js/github.js`,
   `${GHPATH}/assets/fonts/Agustina-Signature.otf`,
 ]
