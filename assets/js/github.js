@@ -19,7 +19,9 @@ async function repos() {
     for (var i = 0; i < repos.length; i++) {
       repo = repos[i]
       if (repos[i].topics.includes(topic_tag)) {
-        if (repo.language == null) { repo.language = "Empty"; }
+        if (repo.language == null) repo.language = "Empty";
+        if (repo.name.length > 30) repo.name = `${repo.name.substring(0, 30)}...`;
+        if (repo.description.length > 100) repo.description = `${repo.description.substring(0, 100)}...`;
         $("#repos").append(repoCard(repo))
         count++;
       }
@@ -44,13 +46,13 @@ function repoCard() {
     <div class="col">
       <a href="${repo.html_url}" target="_blank">
         <div class="card">
-          <span class="gray">${repo.language}</span>
+          <span class="repo-language gray">${repo.language}</span>
           <h3 class="gray">
             <i class="fa-brands fa-buffer"></i>
             ${repo.name}
           </h3>
           <p class="gray">${repo.description}</p>
-          <div class="row gray" style="font-size: 18px">
+          <div class="row repo-info gray">
             <div class="col">
               <i class="fa-solid fa-star fa-2xs"></i>
               ${repo.stargazers_count}

@@ -94,6 +94,14 @@ body {
   background-color: #fff;
 }
 
+.repo-language {
+  font-size: 20px;
+}
+
+.repo-info {
+  font-size: 16px;
+}
+
 .col {
   float: left;
   width: 25%;
@@ -147,6 +155,7 @@ body {
   padding: 14px 80px 18px 36px;
   cursor: pointer;
   margin: 20px;
+  min-height: 220px;
 }
 
 .card:hover{
@@ -159,7 +168,7 @@ body {
 }
 
 .card p{
-  font-size: 18px;
+  font-size: 17px;
 }
 
 a:any-link {
