@@ -17,6 +17,7 @@ and connecting with the public github api.
 - [x] SEO's meta tags
 - [ ] Responsive
 - [ ] Organizations
+- [x] PWA
 
 ## How to create your profile page?
 

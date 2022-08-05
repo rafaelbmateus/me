@@ -19,7 +19,7 @@ if user["location"] == None:
 
 d = {
     'username': username,
-    'title': f'{title} | GitHub Profile Page', 
+    'title': f'{title}', 
     'name': user['name'],
     'bio': user['bio'],
     'company': user['company'],
@@ -41,4 +41,11 @@ with open('builder/template.html', 'r') as f:
 with open('index.html', 'w') as f:
     f.write(result)
 
-print("The index.html file was successfully generated")
+with open('builder/manifest.json', 'r') as f:
+    src = Template(f.read())
+    result = src.substitute(d)
+
+with open('manifest.json', 'w') as f:
+    f.write(result)
+
+print("profile was generated successfully")
