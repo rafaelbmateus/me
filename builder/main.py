@@ -41,7 +41,7 @@ with open('builder/template.html', 'r') as f:
 with open('index.html', 'w') as f:
     f.write(result)
 
-with open('builder/manifest.json', 'r') as f:
+with open('builder/manifest-template.json', 'r') as f:
     src = Template(f.read())
     result = src.substitute(d)
 
