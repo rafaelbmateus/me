@@ -9,7 +9,7 @@ async function repos() {
   page = 1;
   count = 0;
   while (true) {
-    const response = await fetch(url + "?sort=updated&direction=desc&page=" + page);
+    const response = await fetch(url + "?sort=updated&direction=desc&per_page=100&page=" + page);
     const repos = await response.json();
 
     if (!repos.length) {
