@@ -10,7 +10,7 @@
   "icons":[
     {
       "src":"$avatar_url",
-      "sizes":"192x192",
+      "sizes":"460x460",
       "type":"image/png"
     }
   ]

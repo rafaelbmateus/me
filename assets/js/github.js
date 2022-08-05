@@ -12,7 +12,7 @@ async function repos() {
     const response = await fetch(url + "?sort=updated&direction=desc&page=" + page);
     const repos = await response.json();
 
-    if (repos.length == 0) {
+    if (!repos.length) {
       break;
     }
 
