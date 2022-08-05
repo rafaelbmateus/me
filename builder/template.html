@@ -13,12 +13,6 @@
     <meta property="og:title" content="$title">
     <meta property="og:description" content="$bio">
     <meta property="og:image" itemprop="image" content="$avatar_url">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="">
-    <meta property="twitter:url" content="">
-    <meta name="twitter:title" content="$title">
-    <meta name="twitter:description" content="$bio">
-    <meta name="twitter:image" content="$avatar_url">
     <link id="favicon" rel="profile icon" type="image/png" href="$avatar_url">
     <link rel="stylesheet" href="assets/css/background.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -26,7 +20,7 @@
   </head>
   <body>
     <header class="header">
-      <a class="logo" href="/">
+      <a class="logo" href="#">
         <span class="gray">&lt;</span>
         <span class="logo-name">$name</span>
         <span class="gray">/&gt;</span>
@@ -85,8 +79,6 @@
     <script>
       const username = "$username";
       document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
-      document.querySelector('meta[property="twitter:url"]').setAttribute("content", window.location.href);
-      document.querySelector('meta[property="twitter:domain"]').setAttribute("content", window.location.hostname);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/github.js"></script>
