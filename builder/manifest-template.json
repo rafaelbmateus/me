@@ -1,12 +1,12 @@
 {
   "name": "$title",
   "short_name": "$name",
-  "start_url": "index.html",
+  "description": "$bio",
   "display": "standalone",
   "background_color": "#5900b3",
   "theme_color": "black",
-  "scope": ".",
-  "description": "$bio",
+  "start_url": "/me/",
+  "scope": "/me/",
   "icons":[
     {
       "src":"$avatar_url",
