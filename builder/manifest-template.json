@@ -13,5 +13,31 @@
       "sizes":"460x460",
       "type":"image/png"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "$name | GitHub",
+      "short_name": "GitHub",
+      "description": "View the GitHub $name",
+      "url": "https://$github_url"
+    },
+    {
+      "name": "$name | Blog",
+      "short_name": "Blog",
+      "description": "View the blog of $name",
+      "url": "https://$blog_url"
+    },
+    {
+      "name": "$name | Repos",
+      "short_name": "Repos",
+      "description": "View the repos of $name",
+      "url": "https://$repos_url"
+    },
+    {
+      "name": "$name | Followers",
+      "short_name": "Followers",
+      "description": "View the followers of $name",
+      "url": "https://$followers_url"
+    }
   ]
 }
