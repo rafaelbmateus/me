@@ -1,7 +1,7 @@
-# me
+# GitHub-me
 
 Me is the easiest way to create your profile page from
-[GiHhub](https://github.com) for free. 😎
+[GitHub](https://github.com) for free. 😎
 
 All your profile information will be accessed through the public
 [GitHub API](https://docs.github.com/en/rest). 🎒
@@ -84,7 +84,7 @@ in `https://<username>.github.io/me/`.
 > Change `<username>` with your github user. Like: https://github.com/rafaelbmateus
   the username is `rafaelbmateus`.
 
-![5-preview](https://user-images.githubusercontent.com/8009492/183292874-39411ce2-db4f-413a-be17-ba13913cee2b.png)
+![5-preview](https://user-images.githubusercontent.com/8009492/183305975-e3f5b130-214c-4d1c-8f49-cc6bddcba669.png)
 
 ## How show the repositories?
 
