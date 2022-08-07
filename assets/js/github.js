@@ -70,6 +70,10 @@ function repoCard() {
               ${repo.size} MB
             </div>
           </div>
+          <br>
+          <div class="row repo-info gray">
+            ${timeSince(new Date(repo.updated_at))} ago
+          </div>
         </div>
       </a>
     </div>`;
