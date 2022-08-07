@@ -10,6 +10,7 @@ So, have your [github registration](https://github.com/settings/profile) properl
 That way you don't need to make any code changes. 🤖
 
 ✅ Profile information is done in the project build.
+
 ✅ Projects list are updated using jquery on the client side.
 
 ## Features
