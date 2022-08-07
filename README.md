@@ -97,8 +97,8 @@ The HTML fields are filled using data from github.
 
 The endpoint used are:
 
-- [api.github.com/users/<username>](https://api.github.com/users/rafaelbmateus)
-- [api.github.com/users/<username>/repos](https://api.github.com/users/rafaelbmateus/repos)
+- [api.github.com/users/:user](https://api.github.com/users/rafaelbmateus)
+- [api.github.com/users/:user/repos](https://api.github.com/users/rafaelbmateus/repos)
 
 ## Running localhost
 
