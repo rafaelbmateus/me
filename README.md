@@ -1,19 +1,20 @@
 # me
 
-Me is the easiest way to create your profile page from GiHhub for free. 😎
+Me is the easiest way to create your profile page from
+[GiHhub](https://github.com) for free. 😎
 
-All information will be taken from your github profile using the
-[API](https://docs.github.com/en/rest). 🎒
+All your profile information will be accessed through the public
+[GitHub API](https://docs.github.com/en/rest). 🎒
 
-You don't need to have infrastructure costs the availability will be made
-by gh-pages free of charge. 🤑
-
-So, have your [github registration](https://github.com/settings/profile) properly filled out.
+So, have your [GitHub registration](https://github.com/settings/profile) properly filled out.
 That way you don't need to make any code changes. 🤖
+
+You don't need to have infrastructure costs the availability will be made by
+[gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) free of charge. 🤑
 
 ✅ Profile information is done in the project build.
 
-✅ Projects list are updated using jquery on the client side.
+✅ The list of projects is dynamically updated using jquery on the client side.
 
 ## Features
 
