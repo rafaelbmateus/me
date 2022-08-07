@@ -12,6 +12,9 @@ That way you don't need to make any code changes. 🤖
 You don't need to have infrastructure costs the availability will be made by
 [gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) free of charge. 🤑
 
+You will have a link to share on your social networks with SEO's meta tags.
+will also be indexed by the google search engine. 🚀
+
 ✅ Profile information is done in the project build.
 
 ✅ The list of projects is dynamically updated using jquery on the client side.
