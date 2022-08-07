@@ -2,9 +2,11 @@
 
 Me is the easiest way to create your profile page from GiHhub for free. 😎
 
-All information will be taken from your github profile using the API. 🎒
+All information will be taken from your github profile using the
+[API](https://docs.github.com/en/rest). 🎒
 
-You don't need to have infrastructure costs the availability will be made by gh-pages free of charge. 🤑
+You don't need to have infrastructure costs the availability will be made
+by gh-pages free of charge. 🤑
 
 So, have your [github registration](https://github.com/settings/profile) properly filled out.
 That way you don't need to make any code changes. 🤖
