@@ -1,35 +1,42 @@
-# github-me
+# me
 
-Create your profile github page in less than 1 minute without a line of code!
+Me is the easiest way to create your profile page from GiHhub for free. 😎
 
-The web page content is dynamically constructed using javascript
-and connecting with the public github api.
+All information will be taken from your github profile using the API. 🎒
+
+You don't need to have infrastructure costs the availability will be made by gh-pages free of charge. 🤑
+
+So, have your [github registration](https://github.com/settings/profile) properly filled out.
+That way you don't need to make any code changes. 🤖
+
+✅ Profile information is done in the project build.
+✅ Projects list are updated using jquery on the client side.
 
 ## Features
 
-- [x] Basic Profile (login, name and bio)
-- [x] Company, Location, Blog and Twitter
-- [x] Number of followers and following
-- [x] Public repos
+- [x] Show basic profile (login, name and bio)
+- [x] Show company, location, blog and twitter
+- [x] Number of followers
+- [x] Count of public repos
 - [x] Account created at
 - [x] List of repos with the tag
-- [x] Deploy using gh-pages
+- [x] Progressive Web App (PWA)
 - [x] SEO's meta tags
-- [ ] Responsive
-- [ ] Organizations
-- [x] PWA
+- [x] Deploy using gh-pages
+- [ ] Responsive for mobile
+- [ ] List organizations
 
 ## How to create your profile page?
 
-Simply fork this project to your github.
+To create your own profile follow the steps below.
+Basically, just fork this project to your github.
 
-Summary:
+Follow the steps:
 
 1. [Create a fork](https://github.com/rafaelbmateus/me/fork)
 2. Enable Github Actions
 3. Run deploy to Pages
-4. Deploy static content to Pages finished
-5. Access your profile page in `https://<username>.github.io/me/`
+4. Access your profile page in `https://<username>.github.io/me`
 
 ### Details of the steps
 
@@ -38,9 +45,6 @@ Summary:
 To create a fork of this project access
 https://github.com/rafaelbmateus/me/fork
 and click in "Create fork" button.
-
-> You can create the repository with whatever name you want.
-  To get a small url we will use: "me"
 
 ![](/docs/1-create-fork.png)
 
@@ -60,14 +64,12 @@ and click in "Run workflow".
 
 ![](/docs/3-run-deploy.png)
 
-#### 4. Deploy static content to Pages finished
-
 Check if deploy static content to Pages workflow
 run completed successfully.
 
 ![](/docs/4-check-deploy.png)
 
-#### 5. Access your profile page
+#### 4. Access your profile page
 
 Access your profile page
 in `https://<username>.github.io/me/`.
@@ -81,7 +83,9 @@ in `https://<username>.github.io/me/`.
 
 The repositories you want to appear in your profile page's project catalog put the `me` tag.
 
-You can change the tag to another one you prefer in `assets/js/custom.js`.
+You can change the tag to another one you prefer
+but you will need to change a line of code
+[assets/js/github.js#L6](https://github.com/rafaelbmateus/me/blob/main/assets/js/github.js#L6).
 
 ## GitHub API
 
@@ -109,8 +113,12 @@ GITHUB_USERNAME=<username> python3 builder/main.py
 
 ## Others profile pages builders
 
-If you want something more powerful take a look at the projects
+If you want something more powerful take a look at the projects:
 
-- [developerFolio](https://github.com/saadpasta/developerFolio)
+- [Docusaurus](https://docusaurus.io)
+- [Hugo](https://gohugo.io)
+- [Jekyll](https://jekyllrb.com)
+- [Gatsby](https://www.gatsbyjs.com)
+- [DeveloperFolio](https://github.com/saadpasta/developerFolio)
 
 > it will probably take you more than 1 minute to deploy.
