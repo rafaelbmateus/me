@@ -11,6 +11,7 @@ async function repos() {
   while (true) {
     const response = await fetch(url + "?sort=updated&direction=desc&per_page=100&page=" + page);
     const repos = await response.json();
+    $("#loading").hide();
 
     if (!repos.length) {
       break;
