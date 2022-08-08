@@ -84,7 +84,7 @@ in `https://<username>.github.io/me/`.
 > Change `<username>` with your github user. Like: https://github.com/rafaelbmateus
   the username is `rafaelbmateus`.
 
-![5-preview](https://user-images.githubusercontent.com/8009492/183305975-e3f5b130-214c-4d1c-8f49-cc6bddcba669.png)
+![5-Preview](https://user-images.githubusercontent.com/8009492/183321695-387a6c97-d8b8-45f5-bd79-a6e67a70cb52.png)
 
 ## How show the repositories?
 
