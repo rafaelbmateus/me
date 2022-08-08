@@ -11,7 +11,6 @@ body {
 
 .header {
   padding: 30px;
-  background-color: #fff;
 }
 
 .avatar {
@@ -21,7 +20,6 @@ body {
 .footer {
   padding: 10px;
   margin-top: 150px;
-  background-color: #fff;
 }
 
 .logo {
@@ -32,7 +30,6 @@ body {
 .logo-name {
   font-family: "Agustina Regular";
   padding: 0 10px;
-  color: #55198b;
 }
 
 .gray {
@@ -87,6 +84,10 @@ body {
   margin-top: 100px;
 }
 
+.repos-title {
+  margin-left: 30px;
+}
+
 .repos {
   margin-top: 50px;
   padding-top: 80px;
@@ -101,6 +102,10 @@ body {
 
 .repo-info {
   font-size: 16px;
+}
+
+.repos-all {
+  margin-left: 30px;
 }
 
 .col {

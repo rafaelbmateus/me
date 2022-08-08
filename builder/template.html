@@ -26,7 +26,7 @@
     <header class="header">
       <a class="logo" href="#">
         <span class="gray">&lt;</span>
-        <span class="logo-name">$name</span>
+        <span class="logo-name white">$name</span>
         <span class="gray">/&gt;</span>
       </a>
     </header>
@@ -39,8 +39,8 @@
       <h2 class="subtitle light-gray">$bio</h2>
       <div class="gray company">
         <span>
-          Working: <b class="white">$company</b><br>
-          Location: <b class="white">$location</b>
+          <b class="white">$company</b><br>
+          <b class="white">$location</b>
         </span>
       </div>
       <div class="row contact">
@@ -70,13 +70,14 @@
       </div>
     </div>
     <div class="repos">
+      <h2 class="repos-title gray">Projects</h2>
       <div id="loading" class="loading"></div>
       <div id="repos" class="row"></div>
+      <a class="repos-all" href="$repos_url" target="_blank" style="color: #868e96!important">
+        Sell all
+      </a>
     </div>
     <footer class="footer">
-      <a href="$github_url" target="_blank">
-        <img class="avatar" src="$avatar_url" width="30" height="30"/>
-      </a>
       <span class="gray since">$created_at</span>
       <span class="gray location">$location</span>
     </footer>
