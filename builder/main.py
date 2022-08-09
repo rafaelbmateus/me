@@ -29,8 +29,8 @@ d = {
     'blog_url': f'https://{user["blog"]}',
     'repos_url': f'{user["html_url"]}?tab=repositories',
     'followers_url': f'{user["html_url"]}?tab=followers',
-    'public_repos': f'{user["public_repos"]} repositories',
-    'followers': f'{user["followers"]} followers',
+    'repos_count': user["public_repos"],
+    'followers_count': user["followers"],
     'created_at': f'Since {parser.parse(user["created_at"]).strftime("%B %Y")} on GitHub.',
 }
 

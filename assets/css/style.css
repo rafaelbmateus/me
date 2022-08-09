@@ -3,181 +3,103 @@
   src: url("../fonts/Agustina-Signature.otf");
 }
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 32px;
-  margin: 0px;
-}
-
-.header {
-  padding: 30px;
-}
-
-.avatar {
-  border-radius: 50%;
-}
-
-.footer {
-  padding: 10px;
-  margin-top: 150px;
-}
-
-.logo {
-  font-size: 1.4em;
-  text-decoration: none ;
-}
-
-.logo-name {
-  font-family: "Agustina Regular";
-  padding: 0 10px;
-}
-
-.gray {
-  color: #868e96;
-}
-
-.light-gray {
-  color: #b9b9b9;
-}
-
-.white {
-  color: #fff;
-}
-
-.profile {
-  margin-top: 150px;
-  margin-left: 150px;
-  margin-right: 200px;
-}
-
-.title {
-  font-size: 70px;
-  line-height: 1.1;
-  color: #fff;
-}
-
-.subtitle {
-  font-size: 35px;
-  line-height: 40px;
-}
-
-.company {
-  font-size: 25px;
-}
-
-.followers {
-  font-size: 20px;
-  width: 40%;
-}
-
-.since {
-  font-size: 22px;
-  margin-left: 10px;
-}
-
-.location {
-  font-size: 18px;
-  font-style: italic;
-}
-
-.contact {
-  margin-top: 100px;
-}
-
-.repos-title {
-  margin-left: 30px;
-}
-
-.repos {
-  margin-top: 50px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: #fff;
-  min-height: 200px;
-}
-
-.repo-language {
-  font-size: 20px;
-}
-
-.repo-info {
-  font-size: 16px;
-}
-
-.repos-all {
-  margin-left: 30px;
-}
-
-.col {
-  float: left;
-  width: 25%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.button {
-  background-color: #17121c;
-  border: solid 1px #17121c;
-  color: #fff;
-  font-weight: 700;
-  width: max-content;
-  padding: 13px 22px;
-  margin-right: 50px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  margin-top: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.button:hover {
-  background-color: #fff;
-  color: #55198b;
-  transition: all 0.3s ease 0s;
-  transform: translateY(-3px);
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+/* https://wweb.dev/resources/animated-css-background-generator/ */
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
   }
 }
 
-.card{
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  padding: 14px 80px 18px 36px;
-  cursor: pointer;
-  margin: 20px;
-  min-height: 220px;
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #3C3744;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.card:hover{
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 13s linear infinite;
 }
 
-.card h3{
-  font-size: 24px;
+.background li:nth-child(0) {
+  left: 57%;
+  width: 136px;
+  height: 136px;
+  bottom: -136px;
+  animation-delay: 1s;
 }
 
-.card p{
-  font-size: 17px;
+.background li:nth-child(1) {
+  left: 3%;
+  width: 246px;
+  height: 246px;
+  bottom: -246px;
+  animation-delay: 2s;
 }
 
-a:any-link {
-  color: #fff;
-  text-decoration: none;
+.background li:nth-child(2) {
+  left: 16%;
+  width: 136px;
+  height: 136px;
+  bottom: -136px;
+  animation-delay: 5s;
+}
+
+.background li:nth-child(3) {
+  left: 54%;
+  width: 251px;
+  height: 251px;
+  bottom: -251px;
+  animation-delay: 7s;
+}
+
+.background li:nth-child(4) {
+  left: 33%;
+  width: 184px;
+  height: 184px;
+  bottom: -184px;
+  animation-delay: 15s;
+}
+
+.background li:nth-child(5) {
+  left: 40%;
+  width: 192px;
+  height: 192px;
+  bottom: -192px;
+  animation-delay: 4s;
+}
+
+.background li:nth-child(6) {
+  left: 55%;
+  width: 221px;
+  height: 221px;
+  bottom: -221px;
+  animation-delay: 3s;
+}
+
+.background li:nth-child(7) {
+  left: 48%;
+  width: 227px;
+  height: 227px;
+  bottom: -227px;
+  animation-delay: 7s;
 }
