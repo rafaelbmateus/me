@@ -17,85 +17,58 @@
     <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
     <meta name="theme-color" content="black">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="assets/css/background.css">
-    <link rel="stylesheet" href="assets/css/loading.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   </head>
   <body>
-    <header class="header">
-      <a class="logo" href="#">
-        <span class="gray">&lt;</span>
-        <span class="logo-name white">$name</span>
-        <span class="gray">/&gt;</span>
-      </a>
+    <header class="p-10">
+      <span class="text-gray-300">&lt;</span>
+      <a href="#"><span class="text-white px-3" style="font-family: 'Agustina Regular'; font-size: 1.9em">$name</span></a>
+      <span class="text-gray-300">/&gt;</span>
     </header>
-    <div class="profile">
-      <div class="title">
-        <img class="avatar" src="$avatar_url" width="150" height="150"/><br>
-        <span>Hi there, I'm $name</span>
-        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="60" height="60"/>
-      </div>
-      <h2 class="subtitle light-gray">$bio</h2>
-      <div class="gray company">
-        <span>
-          <b class="white">$company</b><br>
-          <b class="white">$location</b>
-        </span>
-      </div>
-      <div class="row contact">
-        <a class="button col" href="$github_url" target="_blank">
-          <i class="fa-brands fa-github"></i>
-          GitHub
+    <section class="pt-10 pl-20 pb-10">
+      <img class="rounded-full ring-2 ring-white h-20 w-20 md:h-36 md:w-36" src="$avatar_url"/>
+      <h1 class="pt-4 text-2xl md:text-4xl text-white">Hi there, I'm $name</h1>
+      <h2 class="pt-10 pr-10 text-xl md:text-3xl text-gray-300">$bio</h2>
+      <h3 class="pt-10 text-lg md:text-2xl text-white font-semibold">@$company</h3>
+      <h4 class="pt-2 text-base md:text-1xl text-white">$location</h4>
+      <div class="py-8">
+        <a class="py-2 px-4 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" href="$github_url" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
         </a>
-        <a class="button col" href="$blog_url" target="_blank">
-          <i class="fa-brands fa-blogger"></i>
-          Blog
+        <a class="py-2 px-4 ml-4 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" href="$blog_url" target="_blank">
+          <i class="fa-brands fa-blogger"></i> Blog
         </a>
       </div>
       <br><hr>
-      <div class="row followers gray">
-        <div class="col">
-          <a href="$repos_url" target="_blank">
-            <i class="fa-solid fa-diagram-project"></i>
-            <span>$public_repos</span>
-          </a>
-        </div>
-        <div class="col">
-          <a href="$followers_url" target="_blank">
-            <i class="fa-solid fa-users"></i>
-            <span>$followers</span>
-          </a>
-        </div>
+      <div class="py-4 text-sm">
+        <a class="text-white hover:text-purple-600" href="$repos_url" target="_blank">
+          <i class="fa-solid fa-diagram-project"></i> $repos_count repositories
+        </a>
+        <a class="pl-4 text-white hover:text-purple-600" href="$followers_url" target="_blank">
+          <i class="fa-solid fa-users"></i> $followers_count followers
+        </a>
       </div>
-    </div>
-    <div class="repos">
-      <h2 class="repos-title gray">Projects</h2>
-      <div id="loading" class="loading"></div>
-      <div id="repos" class="row"></div>
-      <a class="repos-all" href="$repos_url" target="_blank" style="color: #868e96!important">
-        Sell all
+    </section>
+    <section class="pb-5 bg-white">
+      <h2 class="pt-10 pl-10 text-4xl text-gray-600">Projects</h2>
+      <div id="repos" class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5"></div>
+      <a class="ml-10 py-2 px-4 ml-4 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" href="$repos_url" target="_blank">
+        Sell all projects
       </a>
-    </div>
-    <footer class="footer">
-      <span class="gray since">$created_at</span>
-      <span class="gray location">$location</span>
+    </section>
+    <footer class="pt-10 pl-5 pb-2">
+      <span class="text-sm text-gray-300">$created_at</span>
+      <span class="text-xs text-gray-300">$location</span>
     </footer>
     <ul class="background"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
     <script>
       const username = "$username";
       document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
+      if (navigator.serviceWorker) { navigator.serviceWorker.register( '/me/serviceworker.js', {scope: '/me/'}) }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/date.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/github.js"></script>
-    <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/me/serviceworker.js',
-          {scope: '/me/'}
-        )
-      }
-   </script>
   </body>
 </html>

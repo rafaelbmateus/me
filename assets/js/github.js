@@ -2,9 +2,10 @@ $(document).ready(function () {
   repos();
 });
 
+const url = "https://api.github.com/users/" + username + "/repos";
+const topic_tag = "me";
+
 async function repos() {
-  const topic_tag = "me";
-  const url = "https://api.github.com/users/" + username + "/repos";
 
   page = 1;
   count = 0;
@@ -44,37 +45,48 @@ async function repos() {
 
 function repoCard() {
   return `
-    <div class="col">
-      <a href="${repo.html_url}" target="_blank">
-        <div class="card">
-          <span class="repo-language gray">${repo.language}</span>
-          <h3 class="gray">
-            <i class="fa-brands fa-buffer"></i>
-            ${repo.name}
-          </h3>
-          <p class="gray">${repo.description}</p>
-          <div class="row repo-info gray">
-            <div class="col">
-              <i class="fa-solid fa-star fa-2xs"></i>
-              ${repo.stargazers_count}
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-code-fork fa-2xs"></i>
-              ${repo.forks_count}
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2xs"></i>
-              ${repo.watchers_count}
-            </div>
-            <div class="col">
-              ${repo.size} MB
-            </div>
-          </div>
-          <br>
-          <div class="row repo-info gray">
-            ${timeSince(new Date(repo.updated_at))} ago
-          </div>
-        </div>
+  <div class="rounded overflow-hidden shadow-lg hover:bg-gray-100">
+    <div class="p-6">
+      <div class="font-bold text-xl text-gray-500">${repo.language}</div>
+      <br>
+      <a class="font-bold text-2xl text-gray-600" href="${repo.html_url}" target="_blank">
+        <i class="fa-brands fa-buffer"></i>
+        ${repo.name}
       </a>
-    </div>`;
+      <p class="pt-4 text-base text-gray-500">
+        ${repo.description}
+      </p>
+    </div>
+    <div class="pl-3 pt-4">
+      <span class="inline-block px-3 text-sm font-semibold text-gray-600">
+        <i class="fa-solid fa-star fa-2xs"></i>
+        ${repo.stargazers_count}
+      </span>
+      <span class="inline-block px-3 text-sm font-semibold text-gray-600">
+        <i class="fa-solid fa-code-fork fa-2xs"></i>
+        ${repo.forks_count}
+      </span>
+      <span class="inline-block px-3 text-sm font-semibold text-gray-600">
+        <i class="fa-solid fa-eye fa-2xs"></i>
+        ${repo.watchers_count}
+      </span>
+      <span class="inline-block px-3 text-xs font-semibold text-gray-600">
+        ${repo.size} MB
+      </span>
+    </div>
+    <div class="p-4">
+      ${topicsSpan(repo)}
+    </div>
+  </div>`;
+}
+
+function topicsSpan(repo) {
+  topics = "";
+  for (var i = 0; i < repo.topics.length; i++) {
+    topic = repo.topics[i];
+    if (topic == topic_tag) { continue; }
+    topics += `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-1 mb-1">#${topic}</span>`
+  }
+
+  return topics
 }
