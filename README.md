@@ -30,7 +30,7 @@ will also be indexed by the google search engine. 🚀
 - [x] Progressive Web App (PWA)
 - [x] SEO's meta tags
 - [x] Deploy using gh-pages
-- [ ] Responsive for mobile
+- [x] Responsive for mobile
 - [ ] List organizations
 
 ## How to create your profile page?
