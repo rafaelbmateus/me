@@ -21,7 +21,7 @@ async function repos() {
     for (var i = 0; i < repos.length; i++) {
       repo = repos[i]
       if (repos[i].topics.includes(topic_tag)) {
-        if (repo.language == null) repo.language = "Empty";
+        if (repo.language == null) repo.language = "";
         if (repo.name.length > 30) repo.name = `${repo.name.substring(0, 30)}...`;
         if (repo.description.length > 100) repo.description = `${repo.description.substring(0, 100)}...`;
         $("#repos").append(repoCard(repo))
@@ -32,14 +32,10 @@ async function repos() {
     page++;
   }
 
-  if (count == 0) {
-    $("#repos").append(
-      `<br><br>
-      <h3 align="center">
-        Add the "${topic_tag}" tag in GitHub repositories to show here!
-      </h3>
-      <br><br>`
-    );
+  if (count != 0) {
+    $("#repos-add").hide();
+    $("#repos-title").show();
+    $("#repos-all").show();
   }
 }
 
