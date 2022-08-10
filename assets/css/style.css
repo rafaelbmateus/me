@@ -25,7 +25,6 @@
   left: 0;
   margin: 0;
   padding: 0;
-  background: #3C3744;
   overflow: hidden;
   z-index: -1;
 }
@@ -36,7 +35,6 @@
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.2);
   animation: animate 13s linear infinite;
 }
 

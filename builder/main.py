@@ -11,8 +11,12 @@ if user["name"] == None:
     user["name"] = ""
     title = 'GitHub Profile Page'
 
+if user["bio"] == None:
+    user["bio"] = ""
+
+company = f'@{user["company"]}'
 if user["company"] == None:
-    user["company"] = ""
+    company = ""
 
 if user["location"] == None:
     user["location"] = ""
@@ -22,7 +26,7 @@ d = {
     'title': f'{title}', 
     'name': user['name'],
     'bio': user['bio'],
-    'company': user['company'],
+    'company': company,
     'location': user['location'],
     'avatar_url': user['avatar_url'],
     'github_url': user['html_url'],
