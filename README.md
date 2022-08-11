@@ -1,15 +1,14 @@
-# GitHub-me
+# /me
 
 ![github-me](https://user-images.githubusercontent.com/8009492/184020692-1ed045a6-ebf5-423c-a556-7a1dd729b9cb.gif)
+<p align="center">The easiest way to create your GitHub profile page for free!</p>
 
-Me is the easiest way to create your profile page from
-[GitHub](https://github.com) for free. 😎
+## About /me
 
 All your profile information will be accessed through the public
-[GitHub API](https://docs.github.com/en/rest). 🎒
-
-So, have your [GitHub registration](https://github.com/settings/profile) properly filled out.
-That way you don't need to make any code changes. 🤖
+[GitHub API](https://docs.github.com/en/rest).
+So if you are the [profile](https://github.com/settings/profile) filled,
+everything will work 🎒
 
 You don't need to have infrastructure costs the availability will be made by
 [gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) free of charge. 🤑
@@ -38,8 +37,7 @@ will also be indexed by the google search engine. 🚀
 
 ## How to create your profile page?
 
-To create your own profile follow the steps below.
-Basically, just fork this project to your github.
+Just fork this project to your [GitHub](https://github.com).
 
 Follow the steps:
 
@@ -115,11 +113,13 @@ git clone git@github.com:rafaelbmateus/me.git
 cd me
 ```
 
-Build the page using:
+Building the page using python3:
 
 ```console
 GITHUB_USERNAME=<username> python3 builder/main.py
 ```
+
+Open the `index.html` file.
 
 ## Others profile pages builders
 
