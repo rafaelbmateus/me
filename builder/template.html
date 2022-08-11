@@ -7,6 +7,7 @@
     <meta name="keywords" content="$name, github, profile, portfolio, webpage">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="$name">
+    <meta name="github" content="$username">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="$title">
@@ -28,7 +29,9 @@
     </header>
     <section class="pt-10 pl-20 pb-10">
       <img class="rounded-full ring-2 ring-white h-20 w-20 md:h-36 md:w-36" src="$avatar_url"/>
-      <h1 class="pt-4 text-2xl md:text-4xl text-slate-800 dark:text-white">Hi there, I'm $name</h1>
+      <h1 class="pt-4 text-2xl md:text-4xl text-slate-800 dark:text-white">Hi there, I'm
+        <div id="typing" class="inline-block font-semibold"></div>
+      </h1>
       <h2 class="pt-10 pr-10 text-xl md:text-3xl text-gray-500 dark:text-gray-300">$bio</h2>
       <h3 class="pt-10 text-lg md:text-2xl text-gray-700 dark:text-white font-semibold">$company</h3>
       <h4 class="pt-2 text-base md:text-1xl text-gray-700 dark:text-white">$location</h4>
@@ -81,6 +84,7 @@
       if (navigator.serviceWorker) { navigator.serviceWorker.register( '/me/serviceworker.js', {scope: '/me/'}) }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/typing.js"></script>
     <script src="assets/js/dark.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>

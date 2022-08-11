@@ -1,25 +1,26 @@
 var GHPATH = '/me';
 var APP_PREFIX = 'pwa_';
 var VERSION = 'version_003';
-var URLS = [    
+var CACHE_NAME = APP_PREFIX + VERSION
+var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
-  `${GHPATH}/assets/css/background.css`,
   `${GHPATH}/assets/css/style.css`,
-  `${GHPATH}/assets/js/github.js`,
   `${GHPATH}/assets/fonts/Agustina-Signature.otf`,
+  `${GHPATH}/assets/js/dark.js`,
+  `${GHPATH}/assets/js/github.js`,
+  `${GHPATH}/assets/js/typing.js`,
 ]
 
-var CACHE_NAME = APP_PREFIX + VERSION
 self.addEventListener('fetch', function (e) {
   console.log('Fetch request : ' + e.request.url);
   e.respondWith(
     caches.match(e.request).then(function (request) {
       if (request) { 
-        console.log('Responding with cache : ' + e.request.url);
+        console.log('Responding with cache:', e.request.url);
         return request
       } else {
-        console.log('File is not cached, fetching : ' + e.request.url);
+        console.log('File is not cached, fetching:', e.request.url);
         return fetch(e.request)
       }
     })
@@ -44,7 +45,7 @@ self.addEventListener('activate', function (e) {
       cacheWhitelist.push(CACHE_NAME);
       return Promise.all(keyList.map(function (key, i) {
         if (cacheWhitelist.indexOf(key) === -1) {
-          console.log('Deleting cache : ' + keyList[i] );
+          console.log('Deleting cache : ', keyList[i] );
           return caches.delete(keyList[i])
         }
       }))
