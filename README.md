@@ -33,6 +33,7 @@ will also be indexed by the google search engine. 🚀
 - [x] SEO's meta tags
 - [x] Deploy using gh-pages
 - [x] Responsive for mobile
+- [x] Dark/light mode
 - [ ] List organizations
 
 ## How to create your profile page?
