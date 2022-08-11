@@ -1,6 +1,6 @@
 var GHPATH = '/me';
 var APP_PREFIX = 'pwa_';
-var VERSION = 'version_003';
+var VERSION = 'version_004';
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
   `${GHPATH}/`,
