@@ -5,15 +5,17 @@
 
 ## About /me
 
-All your profile information will be accessed through the public
+✅ All your profile information will be accessed through the public
 [GitHub API](https://docs.github.com/en/rest).
-So if you are the [profile](https://github.com/settings/profile) filled,
+
+✅ So if you are the [profile](https://github.com/settings/profile) filled,
 everything will work 🎒
 
-You don't need to have infrastructure costs the availability will be made by
-[gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) free of charge. 🤑
+✅ You don't need to have infrastructure costs the availability will be made by
+[gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+free of charge. 🤑
 
-You will have a link to share on your social networks with SEO's meta tags.
+✅ You will have a link to share on your social networks with SEO's meta tags.
 will also be indexed by the google search engine. 🚀
 
 ✅ Profile information is done in the project build.
@@ -24,6 +26,7 @@ will also be indexed by the google search engine. 🚀
 
 - [x] Show basic profile (login, name and bio)
 - [x] Show company, location, blog and twitter
+- [ ] List organizations
 - [x] Number of followers
 - [x] Count of public repos
 - [x] Account created at
@@ -33,7 +36,7 @@ will also be indexed by the google search engine. 🚀
 - [x] Deploy using gh-pages
 - [x] Responsive for mobile
 - [x] Dark/light mode
-- [ ] List organizations
+- [ ] Friendly customization
 
 ## How to create your profile page?
 
@@ -90,10 +93,6 @@ in `https://<username>.github.io/me/`.
 ## How show the repositories?
 
 The repositories you want to appear in your profile page's project catalog put the `me` tag.
-
-You can change the tag to another one you prefer
-but you will need to change a line of code
-[assets/js/github.js#L6](https://github.com/rafaelbmateus/me/blob/main/assets/js/github.js#L6).
 
 ## GitHub API
 
