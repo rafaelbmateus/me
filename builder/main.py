@@ -45,11 +45,4 @@ with open('builder/template.html', 'r') as f:
 with open('index.html', 'w') as f:
     f.write(result)
 
-with open('builder/manifest-template.json', 'r') as f:
-    src = Template(f.read())
-    result = src.substitute(d)
-
-with open('manifest.json', 'w') as f:
-    f.write(result)
-
 print("profile was generated successfully")

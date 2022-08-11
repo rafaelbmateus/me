@@ -31,7 +31,7 @@ will also be indexed by the google search engine. 🚀
 - [x] Count of public repos
 - [x] Account created at
 - [x] List of repos with the tag
-- [x] Progressive Web App (PWA)
+- [ ] Progressive Web App (PWA)
 - [x] SEO's meta tags
 - [x] Deploy using gh-pages
 - [x] Responsive for mobile
