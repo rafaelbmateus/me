@@ -26,8 +26,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Echo GitHub 
-        run: echo ${{ github.actor }}
       - name: setup python
         uses: actions/setup-python@v4
         with:
